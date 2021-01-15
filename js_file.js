@@ -22,7 +22,7 @@ function trigger() {
     if (isInViewport(box)) {
         card_1.animate([
             {   
-                transform: 'translateX(-25px)',
+                transform: 'translateX(-50px)',
                 opacity: 0
             },
             { 
@@ -30,12 +30,12 @@ function trigger() {
                 opacity: 100
             }
         ], {
-            duration: 1500,
+            duration: 1400,
             iterations: 1
         });
         card_2.animate([
             {   
-                transform: 'translateX(-25px)',
+                transform: 'translateX(-50px)',
                 opacity: 0
             },
             { 
@@ -44,12 +44,12 @@ function trigger() {
             }
         ], {
 
-            duration: 1500,
+            duration: 1400,
             iterations: 1
         });
         card_3.animate([
             {   
-                transform: 'translateX(-25px)',
+                transform: 'translateX(-50px)',
                 opacity: 0
             },
             { 
@@ -57,7 +57,7 @@ function trigger() {
                 opacity: 100
             }
         ], {
-            duration: 1500,
+            duration: 1400,
             iterations: 1
         });
         card_1.style.opacity = 100;
@@ -68,27 +68,60 @@ function trigger() {
 }
 
 function pulse_1() {
-    btn_1.animate([
+    arrows_1.animate([
         {
-            transform: 'translateY(25px)'
+            opacity: 100
+        },
+        {
+            opacity: 0
         }
     ], {
             duration: 1000,
-            iterations: infinite
+            iterations: 1
     });
 }
 
 function pulse_2() {
-    btn_2.animate([
+    arrows_2.animate([
         {
-            transform: 'scale(.5)'
+            opacity: 100
         },
         {
-            transform: 'scale(1)'
+
+            opacity: 0
         }
     ], {
             duration: 1000,
-            iterations: infinite
+            iterations: 1
+    });
+}
+
+
+function pulse_3() {
+    arrows_3.animate([
+        {
+            opacity: 100
+        },
+        {
+            opacity: 0
+        }
+    ], {
+            duration: 1000,
+            iterations: 1
+    });
+}
+
+function click() {
+    pfp.animate([
+        {   
+            transform: 'scale(.9)',
+        },
+        { 
+            transform: 'scale(1)',
+        }
+    ], {
+        duration: 1000,
+        iterations: 1
     });
 }
 
@@ -99,7 +132,18 @@ const card_3 = document.querySelector('#card_3');
 
 const btn_1 = document.querySelector('#btn_1');
 const btn_2 = document.querySelector('#btn_2');
+const btn_3 = document.querySelector('#btn_3');
 
 document.addEventListener('scroll', trigger);
-btn_1.addEventListener('click', pulse_1);
-btn_2.addEventListener('click', pulse_2);
+
+const arrows_1 = document.querySelector('#arrows_1');
+const arrows_2 = document.querySelector('#arrows_2');
+const arrows_3 = document.querySelector('#arrows_3');
+
+btn_1.addEventListener('mouseover', pulse_1);
+btn_2.addEventListener('mouseover', pulse_2);
+btn_3.addEventListener('mouseover', pulse_3);
+
+
+const pfp = document.querySelector('#pfp');
+pfp.addEventListener('click', click);

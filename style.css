@@ -76,41 +76,27 @@ body{
   opacity: 0;
 }
 
-#btn_1, #btn_2 {
-  box-shadow: 0 5px #666;
+#btn_1 {
+  background-color: #0086c1;
 }
 
-#btn_1:active, #btn_2:active {
-  transform: translateY(4px);
+#btn_1:active, #btn_2:active, #btn_3:active {
+  transform: translateY(5px); 
 }
 
-#card_1:hover, #card_2:hover, #card_3:hover {
-  transform: scale(.97);
+#btn_1:hover {
+  background-color: #0078c1;
+  transform: scale(1.05);
 }
 
-/*.card-header {
-  background-color:white !important;
+#btn_2:hover, #btn_3:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.05);
 }
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
 
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
-
-
-
-
+#arrows_1, #arrows_2, #arrows_3 {
+  opacity: 0;
+}
 
 
 
