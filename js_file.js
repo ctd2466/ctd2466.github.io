@@ -30,7 +30,7 @@ function trigger() {
                 opacity: 100
             }
         ], {
-            duration: 500,
+            duration: 1500,
             iterations: 1
         });
         card_2.animate([
@@ -44,7 +44,7 @@ function trigger() {
             }
         ], {
 
-            duration: 500,
+            duration: 1500,
             iterations: 1
         });
         card_3.animate([
@@ -57,7 +57,7 @@ function trigger() {
                 opacity: 100
             }
         ], {
-            duration: 500,
+            duration: 1500,
             iterations: 1
         });
         card_1.style.opacity = 100;
